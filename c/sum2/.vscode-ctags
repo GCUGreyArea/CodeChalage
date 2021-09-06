@@ -1,0 +1,31 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_OUTPUT_MODE	u-ctags	/u-ctags or e-ctags/
+!_TAG_PROGRAM_AUTHOR	Universal Ctags Team	//
+!_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/
+!_TAG_PROGRAM_URL	https://ctags.io/	/official site/
+!_TAG_PROGRAM_VERSION	0.0.0	//
+$(LIB)	Makefile	/^$(LIB) : $(LIBOBJ) $(LIBHDR)$/;"	t
+$(TARGET)	Makefile	/^$(TARGET) : $(OBJ) $(HDR)$/;"	t
+$(TST_TARGET)	Makefile	/^$(TST_TARGET) : $(TST_OBJ) $(TST_HDR)$/;"	t
+%.o	Makefile	/^%.o: %.c$/;"	t
+.phony	Makefile	/^.phony: all$/;"	t
+CC	Makefile	/^CC     = gcc$/;"	m
+CFLAGS	Makefile	/^CFLAGS = -g -std=c11 -Wall -ggdb3 -Ibin -Lbin$/;"	m
+CPP	Makefile	/^CPP    = g++$/;"	m
+HDR	Makefile	/^HDR    := $(patsubst %.c,%.h,$(SRC))$/;"	m
+OBJ	Makefile	/^OBJ    := $(patsubst %.c,%.o,$(SRC))$/;"	m
+SRC	Makefile	/^SRC = $(TARGET).c$/;"	m
+TARGET	Makefile	/^TARGET = sum2$/;"	m
+TEST	test_sum2.cpp	/^TEST(testSum2, testThatSumtTwoReturnsValidValues) {$/;"	f
+TST	Makefile	/^TST = $(TST_TARGET).cpp test_main.cpp$/;"	m
+TST_HDR	Makefile	/^TST_HDR := $(patsubst %.c,%.h,$(TST))$/;"	m
+TST_OBJ	Makefile	/^TST_OBJ := $(patsubst %.c,%.o,$(TST))$/;"	m
+TST_TARGET	Makefile	/^TST_TARGET = test_main$/;"	m
+__SUM2__	sum2.h	/^#define __SUM2__$/;"	d
+all	Makefile	/^all: $(TARGET) $(TST_TARGET)$/;"	t
+clean	Makefile	/^clean:$/;"	t
+main	test_main.cpp	/^int main(int argc, const char ** argv) {$/;"	f	typeref:typename:int
+test	Makefile	/^test: $(TARGET)	$(TST_TARGET)$/;"	t
+twoSum	sum2.c	/^int* twoSum(int* nums, int numsSize, int target, int* returnSize) {$/;"	f	typeref:typename:int *
+valgrind	Makefile	/^valgrind: $(TARGET)	$(TST_TARGET)$/;"	t

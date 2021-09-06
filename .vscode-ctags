@@ -1,0 +1,26 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_OUTPUT_MODE	u-ctags	/u-ctags or e-ctags/
+!_TAG_PROGRAM_AUTHOR	Universal Ctags Team	//
+!_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/
+!_TAG_PROGRAM_URL	https://ctags.io/	/official site/
+!_TAG_PROGRAM_VERSION	0.0.0	//
+$(LIB)	c/sum2/Makefile	/^$(LIB) : $(LIBOBJ) $(LIBHDR)$/;"	t
+$(TARGET)	c/sum2/Makefile	/^$(TARGET) : $(OBJ) $(HDR) $(LIB) $/;"	t
+%.o	c/sum2/Makefile	/^%.o: %.c$/;"	t
+CC	c/sum2/Makefile	/^CC     = gcc$/;"	m
+CFLAGS	c/sum2/Makefile	/^CFLAGS = -g -std=c11 -Wall -ggdb3 -I$(SUPPORTDIR) -L$(LIBDIR)$/;"	m
+HDR	c/sum2/Makefile	/^HDR    := $(patsubst %.c,%.h,$(SRC)) $/;"	m
+LIB	c/sum2/Makefile	/^LIB = lib-3num.a$/;"	m
+LIBDIR	c/sum2/Makefile	/^LIBDIR      =  \/usr\/local\/lib$/;"	m
+LIBHDR	c/sum2/Makefile	/^LIBHDR := $(patsubst %.c,%.h,$(LIBSRC)) $/;"	m
+LIBOBJ	c/sum2/Makefile	/^LIBOBJ := $(patsubst %.c,%.o,$(LIBSRC)) $/;"	m
+LIBSRC	c/sum2/Makefile	/^LIBSRC = lib-3num.c$/;"	m
+OBJ	c/sum2/Makefile	/^OBJ    := $(patsubst %.c,%.o,$(SRC)) $/;"	m
+SRC	c/sum2/Makefile	/^SRC = 3num.c $/;"	m
+SUPPORTDIR	c/sum2/Makefile	/^SUPPORTDIR  = ..\/support_lib$/;"	m
+SUPPORTLILB	c/sum2/Makefile	/^SUPPORTLILB = support.a$/;"	m
+TARGET	c/sum2/Makefile	/^TARGET = 3num$/;"	m
+all	c/sum2/Makefile	/^all: $(TARGET) $(LIB) $/;"	t
+clean	c/sum2/Makefile	/^clean: $/;"	t
+install	c/sum2/Makefile	/^install: $(TARGET)$/;"	t
