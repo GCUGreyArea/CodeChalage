@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#include "lib/libsum2.h"
+#include <libsum2.h>
 
 
 int main(int argc,char ** argv) {
